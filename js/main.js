@@ -1,7 +1,35 @@
+var foodDictionary = {
+  "сухоядение": [
+    "хлеб",
+    "вода",
+    "соль",
+    "сырые овощи",
+    "квашеные овощи",
+    "зелень",
+    "мед",
+    "термически обработанная пища растительного происхождения без вкусовых приправ",
+    "овощи печеные",
+    "фрукты сырые",
+    "фрукты моченые",
+    "травяные настои",
+    "холодные напитки",
+    "соки"
+  ]
+};
+
 var Period = function Period() {
   this.name = "Осенний мясоед";
   this.startDate = new Date(2017, 7, 28);
   this.endDate = new Date(2017, 10, 8);
+  this.dayOfTheWeek = [
+    "",
+    "",
+    "",
+    "сухоядение",
+    "",
+    "",
+    ""
+  ];
 };
 
 Period.prototype.getMenu = function getMenu() {
@@ -22,7 +50,11 @@ var OrthodoxKitchen = function OrthodoxKitchen() {
         return p.startDate <= now && now <= p.endDate;
     } );
 
-    if( period ) console.log(period);
+    if( period ) {
+      document.querySelector("#periodName > h1").innerText = period.name;
+      document.querySelector("#periodName > h2").innerText = period.dayOfTheWeek[dayOfTheWeek];
+      document.querySelector("#foodRecommendations > p").innerText = foodDictionary[period.dayOfTheWeek[dayOfTheWeek]].join(", ");
+    }
   };
 };
 
