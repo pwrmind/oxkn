@@ -20,14 +20,14 @@ var foodDictionary = {
 var Period = function Period() {
   this.name = "Осенний мясоед";
   this.startDate = new Date(2017, 7, 28);
-  this.endDate = new Date(2017, 10, 8);
+  this.endDate = new Date(2017, 10, 27);
   this.dayOfTheWeek = [
     "",
     "",
     "",
     "сухоядение",
     "",
-    "",
+    "сухоядение",
     ""
   ];
 };
