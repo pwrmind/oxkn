@@ -49,6 +49,7 @@
 			height: 80px;
 			/*box-shadow: inset 0px 0px 2px black;*/
 			border-top: 1px solid #f4f4f4;
+			position: relative;
 		}
 
 		.recipe:last-child {
@@ -57,6 +58,15 @@
 
 		.recipe:hover {
 			background-color: #f4f4f4;
+		}
+
+		.recipie.button {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			width: 32px;
+			height: 72px;
+			line-height: 72px;
 		}
 
 		.recipe.image {
@@ -106,6 +116,9 @@
 						<h4>Салаты</h4>
 					</div>
 				</div>
+				<div class="recipie button">
+					<i class="fa fa-chevron-right" aria-hidden="true"></i>
+				</div>
 			</div>
 			<div class="recipe">
 				<div class="recipe image">
@@ -116,6 +129,9 @@
 						<h4>Супы</h4>
 					</div>
 				</div>
+				<div class="recipie button">
+					<i class="fa fa-chevron-right" aria-hidden="true"></i>
+				</div>
 			</div>
 			<div class="recipe">
 				<div class="recipe image">
@@ -125,6 +141,9 @@
 					<div class="title">
 						<h4>Основные блюда</h4>
 					</div>
+				</div>
+				<div class="recipie button">
+					<i class="fa fa-chevron-right" aria-hidden="true"></i>
 				</div>
 			</div>
 		</div>
