@@ -17,22 +17,17 @@ var foodDictionary = {
   ],
   "поста нет": [
     "по пище ограничений нет"
+  ],
+  "горячая без масла": [
+    ""
   ]
 };
 
-var Period = function Period() {
-  this.name = "Осенний мясоед";
-  this.startDate = new Date(2017, 7, 28);
-  this.endDate = new Date(2017, 10, 27);
-  this.dayOfTheWeek = [
-    "поста нет",
-    "поста нет",
-    "поста нет",
-    "сухоядение",
-    "поста нет",
-    "сухоядение",
-    "поста нет"
-  ];
+var Period = function Period(properties) {
+  this.name = properties.name;
+  this.startDate = properties.startDate;
+  this.endDate = properties.endDate;
+  this.dayOfTheWeek = properties.dayOfTheWeek;
 };
 
 Period.prototype.getMenu = function getMenu() {
@@ -40,10 +35,65 @@ Period.prototype.getMenu = function getMenu() {
 };
 
 var OrthodoxKitchen = function OrthodoxKitchen() {
-  this.periods = [];
-  
-  this.periods.push(new Period());
-  
+  this.periods = [
+    {
+      name: "Осенний мясоед",
+      startDate: new Date(2017, 7, 28),
+      endDate: new Date(2017, 10, 27),
+      dayOfTheWeek: [
+        "поста нет",
+        "поста нет",
+        "поста нет",
+        "сухоядение",
+        "поста нет",
+        "сухоядение",
+        "поста нет"
+      ]
+    },
+    {
+      name: "Рождественский пост",
+      startDate: new Date(2017, 10, 27),
+      endDate: new Date(2017, 11, 19),
+      dayOfTheWeek: [
+        "рыба",
+        "горячая без масла",
+        "рыба",
+        "сухоядение",
+        "рыба",
+        "сухоядение",
+        "рыба"
+      ]
+    },
+    {
+      name: "Рождественский пост",
+      startDate: new Date(2017, 11, 20),
+      endDate: new Date(2018, 0, 1),
+      dayOfTheWeek: [
+        "рыба",
+        "горячая без масла",
+        "горячая с маслом",
+        "сухоядение",
+        "горячая с маслом",
+        "сухоядение",
+        "рыба"
+      ]
+    },
+    {
+      name: "Рождественский пост",
+      startDate: new Date(2018, 0, 2),
+      endDate: new Date(2018, 0, 6),
+      dayOfTheWeek: [
+        "горячая с маслом",
+        "сухоядение",
+        "горячая без масла",
+        "сухоядение",
+        "горячая без масла",
+        "сухоядение",
+        "горячая с маслом"
+      ]
+    }
+  ];
+    
   this.getMenu = function getMenu() {
     var d = new Date();
     var dayOfTheWeek = d.getDay();
