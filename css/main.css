@@ -12,16 +12,18 @@ html, body {
 	font-family: "CyrillicOld", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	margin: 0px;
 	padding: 0px;
+	margin-bottom: 18px;
 }
 #oxkn {
+	/*
 	position: absolute;
 	top:0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-
 	margin: auto;
 	margin-bottom: 32px;
+	*/
 }
 
 #periodName {
