@@ -45,8 +45,13 @@
 		}
 
 		.recipe {
+			cursor: pointer;
 			height: 80px;
 			box-shadow: inset 0px 0px 2px black;
+		}
+
+		.recipe:hover {
+			background-color: #f4f4f4;
 		}
 
 		.recipe.image {
@@ -54,6 +59,11 @@
 			height: 80px;
 			display: inline-block;
 			float: left;
+			overflow: hidden;
+		}
+
+		.recipe.image > img {
+			height: 80px;
 		}
 
 		.recipe > .description {
@@ -71,17 +81,21 @@
 </head>
 <body>
 	<div id="oxkn">
-		<div id="periodName">
-			<h1></h1>
-			<h2></h2>
-		</div>
-		<div id="foodRecommendations">
-			<h4>Рекомендации:</h4>
-			<p></p>
+		<div id="header">
+			<div id="periodName">
+				<h1></h1>
+				<h2></h2>
+			</div>
+			<div id="foodRecommendations">
+				<h4>Рекомендации:</h4>
+				<p></p>
+			</div>
 		</div>
 		<div id="recipes">
 			<div class="recipe">
-				<div class="recipe image"></div>
+				<div class="recipe image">
+					<img src="./images/img_001.jpg" alt="Related image">
+				</div>
 				<div class="description">
 					<div class="title">
 						<h4>Салаты</h4>
@@ -89,7 +103,9 @@
 				</div>
 			</div>
 			<div class="recipe">
-				<div class="recipe image"></div>
+				<div class="recipe image">
+					<img src="./images/img_002.jpg" alt="Related image">
+				</div>
 				<div class="description">
 					<div class="title">
 						<h4>Супы</h4>
@@ -97,7 +113,9 @@
 				</div>
 			</div>
 			<div class="recipe">
-				<div class="recipe image"></div>
+				<div class="recipe image">
+					<img src="./images/img_003.jpg" alt="Related image">
+				</div>
 				<div class="description">
 					<div class="title">
 						<h4>Основные блюда</h4>
